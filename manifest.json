@@ -1,0 +1,13 @@
+{
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/garage.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Light Garage",
+  "short_name": "Garage",
+  "start_url": "/index.html"
+}
