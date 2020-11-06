@@ -9,5 +9,7 @@
   ],
   "name": "Light Garage",
   "short_name": "Garage",
-  "start_url": "/index.html"
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "orientation": "portrait"
 }
