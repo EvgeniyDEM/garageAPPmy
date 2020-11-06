@@ -1,16 +1,15 @@
-$(document).ready(function(){
-	createSocket();
-}); 
-
-/////////////////////////////////////
 if (!window.WebSocket) {
 	document.body.innerHTML = 'WebSocket в этом браузере не поддерживается.';
 }
 
-var sock;
+btn.onclick=function(){
+	createSocket();
+}; 
+
+
 function createSocket(){
-	// создать подключение
-	sock = new WebSocket("ws://192.168.1.3:8080");
+	var sock;
+	sock = new WebSocket("ws://192.168.1.1:8080");
 
 	sock.onopen=function () {
 		sock.send('чего-то отправляем');
@@ -22,10 +21,10 @@ function createSocket(){
 	};
 	
 	sock.onerror=function(e){ //не срабатывает
-		//console.log("Сервак сцуко сдох");
+		alert("WS not response");
 	}
 	sock.onclose=function(e){										//Можно реализовать автопереподключение
-		//console.log(e);
+		console.log(e.code);
 		//againOpen();
 	}
 }
