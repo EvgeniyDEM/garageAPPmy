@@ -9,7 +9,7 @@ btn.onclick=function(){
 
 function createSocket(){
 	var sock;
-	sock = new WebSocket("ws://192.168.1.100:80");
+	sock = new WebSocket("wss://192.168.1.100:8080");
 
 	sock.onopen=function () {
 		sock.send('чего-то отправляем');
